@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Assessment Results | NKP</title>
+
+    <link
+        rel="stylesheet"
+        href="css/results.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="top-header">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                NK
+            </div>
+
+            <div class="brand-text">
+
+                <h2>NKP</h2>
+
+                <span>
+                    Namma KanakkuPillai
+                </span>
+
+            </div>
+
+        </div>
+
+        <a
+            href="dashboard.html"
+            class="dashboard-link"
+        >
+            Dashboard
+        </a>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main class="results-page">
+
+        <section class="results-container">
+
+
+            <!-- PAGE TITLE -->
+
+            <div class="page-heading">
+
+                <div class="success-icon">
+                    ✓
+                </div>
+
+                <p
+                    class="eyebrow"
+                    id="resultEyebrow"
+                >
+                    CATEGORY COMPLETED
+                </p>
+
+                <h1 id="resultTitle">
+                    Business Health Results
+                </h1>
+
+                <p id="resultDescription">
+                    Your assessment category has been successfully completed.
+                </p>
+
+            </div>
+
+
+            <!-- SCORE CARD -->
+
+            <section class="score-card">
+
+                <div class="score-left">
+
+                    <span
+                        class="score-label"
+                        id="scoreLabel"
+                    >
+                        Category Health Score
+                    </span>
+
+                    <div class="score-number">
+
+                        <span id="scoreValue">
+                            0
+                        </span>
+
+                        <span class="score-percent">
+                            %
+                        </span>
+
+                    </div>
+
+                    <p id="scoreMessage">
+                        Calculating your business health...
+                    </p>
+
+                </div>
+
+
+                <div class="score-circle">
+
+                    <div class="circle-inner">
+
+                        <strong id="circleScore">
+                            0%
+                        </strong>
+
+                        <span id="circleLabel">
+                            Category Score
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- CATEGORY INFO -->
+
+            <section class="summary-card">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <p class="section-label">
+                            CURRENT ASSESSMENT
+                        </p>
+
+                        <h2 id="categoryName">
+                            Loading Category...
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-grid">
+
+                    <div class="summary-item">
+
+                        <span class="summary-icon">
+                            📊
+                        </span>
+
+                        <div>
+
+                            <span>
+                                Category
+                            </span>
+
+                            <strong id="categoryNumber">
+                                1 / 5
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span class="summary-icon">
+                            📝
+                        </span>
+
+                        <div>
+
+                            <span>
+                                Questions
+                            </span>
+
+                            <strong id="questionCount">
+                                25 / 25
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span class="summary-icon">
+                            🎯
+                        </span>
+
+                        <div>
+
+                            <span>
+                                Maximum Score
+                            </span>
+
+                            <strong>
+                                125
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span class="summary-icon">
+                            ✅
+                        </span>
+
+                        <div>
+
+                            <span>
+                                Status
+                            </span>
+
+                            <strong id="completionStatus">
+                                Completed
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- FINAL CATEGORY BREAKDOWN -->
+
+            <section
+                class="summary-card"
+                id="finalBreakdown"
+                style="display:none;"
+            >
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <p class="section-label">
+                            FINAL ASSESSMENT
+                        </p>
+
+                        <h2>
+                            Business Health Overview
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-grid">
+
+                    <div class="summary-item">
+
+                        <span class="summary-icon">
+                            ⚙
+                        </span>
+
+                        <div>
+
+                            <span>
+                                Operational Efficiency
+                            </span>
+
+                            <strong id="operationalScore">
+                                0%
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span class="summary-icon">
+                            ₹
+                        </span>
+
+                        <div>
+
+                            <span>
+                                Financial Growth
+                            </span>
+
+                            <strong id="financialScore">
+                                0%
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span class="summary-icon">
+                            ◉
+                        </span>
+
+                        <div>
+
+                            <span>
+                                Market Position
+                            </span>
+
+                            <strong id="marketScore">
+                                0%
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span class="summary-icon">
+                            ✓
+                        </span>
+
+                        <div>
+
+                            <span>
+                                Compliance & Risk
+                            </span>
+
+                            <strong id="complianceScore">
+                                0%
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span class="summary-icon">
+                            ✦
+                        </span>
+
+                        <div>
+
+                            <span>
+                                Sustainability & Growth
+                            </span>
+
+                            <strong id="sustainabilityScore">
+                                0%
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- AI SECTION -->
+
+            <section class="ai-card">
+
+                <div class="ai-icon">
+                    🤖
+                </div>
+
+
+                <div class="ai-content">
+
+                    <p class="ai-label">
+                        AI-POWERED BUSINESS ANALYSIS
+                    </p>
+
+                    <h2>
+                        Get Personalized AI Suggestions
+                    </h2>
+
+                    <p>
+                        Let NKP analyse your assessment results
+                        and provide personalized recommendations,
+                        improvement areas and actionable business
+                        suggestions.
+                    </p>
+
+
+                    <a
+                        href="ai-insights.html"
+                        class="ai-button"
+                        id="aiSuggestionsButton"
+                    >
+
+                        <span>
+                            🤖
+                        </span>
+
+                        Get AI Suggestions
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- ACTIONS -->
+
+            <section class="bottom-actions">
+
+                <a
+                    href="dashboard.html"
+                    class="secondary-button"
+                    id="dashboardButton"
+                >
+                    ← Back to Dashboard
+                </a>
+
+
+                <a
+                    href="reports.html"
+                    class="secondary-button"
+                    id="reportsButton"
+                >
+                    View Reports →
+                </a>
+
+
+                <!-- NEXT CATEGORY -->
+
+                <button
+                    class="secondary-button"
+                    id="nextCategoryButton"
+                    style="display:none;"
+                >
+                    Next Category →
+                </button>
+
+            </section>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 NKP | Namma KanakkuPillai
+        </p>
+
+    </footer>
+
+
+    <script src="js/results.js"></script>
+
+</body>
+
+</html>
+```

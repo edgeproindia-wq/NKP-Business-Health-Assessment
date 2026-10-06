@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NKP | Reports & Progress</title>
+
+    <link rel="stylesheet" href="css/reports.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="page-header">
+
+        <a href="dashboard.html" class="logo">
+
+            <div class="logo-icon">
+                NKP
+            </div>
+
+            <div class="logo-text">
+                NAMMA KANAKKUPILLAI
+                <span>BUSINESS HEALTH PLATFORM</span>
+            </div>
+
+        </a>
+
+        <a href="dashboard.html" class="dashboard-link">
+            ← Dashboard
+        </a>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="reports-container">
+
+        <!-- PAGE HEADER -->
+        <section class="reports-intro">
+
+            <span class="page-label">
+                BUSINESS ANALYTICS
+            </span>
+
+            <h1>
+                Reports & Progress
+            </h1>
+
+            <p>
+                Track your business health, assessment
+                performance and improvement over time.
+            </p>
+
+        </section>
+
+
+        <!-- SUMMARY CARDS -->
+        <section class="summary-grid">
+
+            <div class="summary-card">
+
+                <div class="summary-icon">
+                    📊
+                </div>
+
+                <div>
+                    <span>
+                        Latest Score
+                    </span>
+
+                    <strong id="latestScore">
+                        0%
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <div class="summary-icon">
+                    📝
+                </div>
+
+                <div>
+                    <span>
+                        Assessments
+                    </span>
+
+                    <strong id="assessmentCount">
+                        0
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <div class="summary-icon">
+                    📈
+                </div>
+
+                <div>
+                    <span>
+                        Progress
+                    </span>
+
+                    <strong id="progressValue">
+                        0%
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <div class="summary-icon">
+                    🏢
+                </div>
+
+                <div>
+                    <span>
+                        Business
+                    </span>
+
+                    <strong id="businessName">
+                        Business
+                    </strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CURRENT PERFORMANCE -->
+        <section class="report-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span>
+                        CURRENT PERFORMANCE
+                    </span>
+
+                    <h2>
+                        Business Health Overview
+                    </h2>
+
+                </div>
+
+                <div
+                    class="current-score"
+                    id="currentScore">
+                    0%
+                </div>
+
+            </div>
+
+
+            <div class="health-grid">
+
+                <div class="health-card">
+
+                    <div class="health-card-top">
+
+                        <span>
+                            Operational Efficiency
+                        </span>
+
+                        <strong id="operationalScore">
+                            --
+                        </strong>
+
+                    </div>
+
+                    <div class="health-progress">
+                        <div
+                            id="operationalBar"
+                            class="health-progress-fill">
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="health-card">
+
+                    <div class="health-card-top">
+
+                        <span>
+                            Financial Growth
+                        </span>
+
+                        <strong id="financialScore">
+                            --
+                        </strong>
+
+                    </div>
+
+                    <div class="health-progress">
+                        <div
+                            id="financialBar"
+                            class="health-progress-fill">
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="health-card">
+
+                    <div class="health-card-top">
+
+                        <span>
+                            Market Position
+                        </span>
+
+                        <strong id="marketScore">
+                            --
+                        </strong>
+
+                    </div>
+
+                    <div class="health-progress">
+                        <div
+                            id="marketBar"
+                            class="health-progress-fill">
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="health-card">
+
+                    <div class="health-card-top">
+
+                        <span>
+                            Compliance & Risk
+                        </span>
+
+                        <strong id="complianceScore">
+                            --
+                        </strong>
+
+                    </div>
+
+                    <div class="health-progress">
+                        <div
+                            id="complianceBar"
+                            class="health-progress-fill">
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="health-card">
+
+                    <div class="health-card-top">
+
+                        <span>
+                            Sustainability & Growth
+                        </span>
+
+                        <strong id="sustainabilityScore">
+                            --
+                        </strong>
+
+                    </div>
+
+                    <div class="health-progress">
+                        <div
+                            id="sustainabilityBar"
+                            class="health-progress-fill">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ASSESSMENT HISTORY -->
+        <section class="report-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span>
+                        ASSESSMENT HISTORY
+                    </span>
+
+                    <h2>
+                        Your Previous Assessments
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="history-table-wrapper">
+
+                <table class="history-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Date
+                            </th>
+
+                            <th>
+                                Category
+                            </th>
+
+                            <th>
+                                Assessment Area
+                            </th>
+
+                            <th>
+                                Score
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="assessmentHistory">
+
+                        <tr>
+
+                            <td colspan="5">
+                                No assessment history available.
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROGRESS -->
+        <section class="progress-section">
+
+            <div class="progress-content">
+
+                <div>
+
+                    <span class="page-label">
+                        PROGRESS TRACKING
+                    </span>
+
+                    <h2>
+                        Keep Improving Your Business
+                    </h2>
+
+                    <p>
+                        Complete assessments regularly to
+                        understand how your business health
+                        changes over time.
+                    </p>
+
+                </div>
+
+                <div class="progress-visual">
+
+                    <div class="progress-ring">
+
+                        <strong id="progressRing">
+                            0%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACTIONS -->
+        <section class="report-actions">
+
+            <button
+                type="button"
+                id="newAssessmentBtn"
+                class="primary-btn">
+
+                Start New Assessment →
+
+            </button>
+
+            <button
+                type="button"
+                id="dashboardBtn"
+                class="secondary-btn">
+
+                Back to Dashboard
+
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+
+        <p>
+            © 2026 NKP | Namma KanakkuPillai.
+            Business Health Assessment Platform.
+        </p>
+
+    </footer>
+
+
+    <script src="js/reports.js"></script>
+
+</body>
+
+</html>

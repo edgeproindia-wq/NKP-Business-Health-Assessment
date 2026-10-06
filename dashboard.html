@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>NKP | Business Health Dashboard</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+```
+
+</head>
+
+<body>
+
+```
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+    <div class="brand">
+        <div class="brand-logo">NKP</div>
+
+        <div class="brand-name">
+            <strong>NAMMA</strong>
+            <span>KANAKKUPILLAI</span>
+        </div>
+    </div>
+
+    <div class="sidebar-section">
+
+        <p class="sidebar-title">MAIN MENU</p>
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html" class="nav-item active">
+                <span class="nav-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="categories.html" class="nav-item" id="assessmentNav">
+                <span class="nav-icon">◈</span>
+                <span>Assessments</span>
+            </a>
+
+            <a href="reports.html" class="nav-item" id="reportsNav">
+                <span class="nav-icon">▣</span>
+                <span>Reports</span>
+            </a>
+
+            <a href="ai-insights.html" class="nav-item" id="aiInsightsNav">
+                <span class="nav-icon">✦</span>
+                <span>AI Insights</span>
+            </a>
+
+        </nav>
+
+    </div>
+
+    <div class="sidebar-section">
+
+        <p class="sidebar-title">ACCOUNT</p>
+
+        <nav class="sidebar-nav">
+
+            <a href="business-setup.html" class="nav-item" id="settingsNav">
+                <span class="nav-icon">⚙</span>
+                <span>Settings</span>
+            </a>
+
+            <a href="#" class="nav-item" id="logoutBtn">
+                <span class="nav-icon">↪</span>
+                <span>Logout</span>
+            </a>
+
+        </nav>
+
+    </div>
+
+    <div class="sidebar-bottom">
+
+        <div class="help-card">
+
+            <div class="help-icon">
+                ✦
+            </div>
+
+            <div>
+                <strong>Need help?</strong>
+                <p>We're here to help you.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</aside>
+
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<main class="main-content">
+
+    <!-- ================= TOPBAR ================= -->
+
+    <header class="topbar">
+
+        <div class="topbar-left">
+
+            <div class="mobile-menu">
+                ☰
+            </div>
+
+            <div>
+
+                <p class="page-label">
+                    BUSINESS HEALTH PLATFORM
+                </p>
+
+                <h2>
+                    Dashboard
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="topbar-right">
+
+            <button
+                type="button"
+                class="notification-btn"
+                id="notificationBtn"
+                aria-label="Notifications"
+            >
+                🔔
+                <span></span>
+            </button>
+
+
+            <div class="profile" id="profileBtn">
+
+                <div class="profile-avatar" id="profileAvatar">
+                    J
+                </div>
+
+                <div class="profile-info">
+
+                    <strong id="userName">
+                        User
+                    </strong>
+
+                    <span>
+                        Business Owner
+                    </span>
+
+                </div>
+
+                <span class="profile-arrow">
+                    ▾
+                </span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= DASHBOARD BODY ================= -->
+
+    <div class="dashboard-container">
+
+
+        <!-- ================= WELCOME ================= -->
+
+        <section class="welcome-section">
+
+            <div class="welcome-content">
+
+                <span class="welcome-badge">
+                    ✦ AI-Powered Business Intelligence
+                </span>
+
+                <h1>
+                    Understand your business.
+                    <br>
+                    <span>Grow with confidence.</span>
+                </h1>
+
+                <p>
+                    Get a clear picture of your business health,
+                    identify risks and discover opportunities
+                    with NKP.
+                </p>
+
+
+                <div class="welcome-actions">
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        id="startAssessmentBtn"
+                    >
+                        Start Business Assessment
+                        <span>→</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="viewGuideBtn"
+                    >
+                        View Guide
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- HEALTH SCORE PREVIEW -->
+
+            <div class="health-preview">
+
+                <div class="score-header">
+
+                    <div>
+                        <span>BUSINESS HEALTH</span>
+                        <strong>Category Progress</strong>
+                    </div>
+
+                    <div class="score-status">
+                        NOT ASSESSED
+                    </div>
+
+                </div>
+
+
+                <div class="score-circle">
+
+                    <div class="circle-inner">
+
+                        <strong>—</strong>
+
+                        <span>/ 100</span>
+
+                    </div>
+
+                </div>
+
+
+                <p class="score-message">
+                    Complete your business assessment
+                    to unlock your Business Health results.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BUSINESS OVERVIEW ================= -->
+
+        <section class="section-block">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-kicker">
+                        YOUR BUSINESS
+                    </span>
+
+                    <h2>
+                        Business Overview
+                    </h2>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="view-details"
+                    id="viewDetailsBtn"
+                >
+                    View Details →
+                </button>
+
+            </div>
+
+
+            <div class="overview-grid">
+
+                <div class="overview-card">
+
+                    <div class="overview-icon green">
+                        ◉
+                    </div>
+
+                    <div class="overview-content">
+
+                        <span>
+                            BUSINESS NAME
+                        </span>
+
+                        <strong id="businessName">
+                            Your Business
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="overview-card">
+
+                    <div class="overview-icon blue">
+                        ◫
+                    </div>
+
+                    <div class="overview-content">
+
+                        <span>
+                            INDUSTRY
+                        </span>
+
+                        <strong id="industry">
+                            Not specified
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="overview-card">
+
+                    <div class="overview-icon purple">
+                        ◎
+                    </div>
+
+                    <div class="overview-content">
+
+                        <span>
+                            EMPLOYEES
+                        </span>
+
+                        <strong id="employees">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="overview-card">
+
+                    <div class="overview-icon orange">
+                        ⌖
+                    </div>
+
+                    <div class="overview-content">
+
+                        <span>
+                            LOCATION
+                        </span>
+
+                        <strong id="businessLocation">
+                            Not specified
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HEALTH AREAS ================= -->
+
+        <section class="section-block">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-kicker">
+                        ASSESSMENT FRAMEWORK
+                    </span>
+
+                    <h2>
+                        5 Business Health Areas
+                    </h2>
+
+                    <p>
+                        Evaluate the key areas that influence
+                        your business performance.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="health-grid">
+
+
+                <!-- 01 OPERATIONAL -->
+
+                <div
+                    class="health-card operational"
+                    data-category="Operational Efficiency"
+                >
+
+                    <div class="card-top">
+
+                        <div class="health-icon">
+                            ⚙
+                        </div>
+
+                        <span class="card-arrow">
+                            →
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Operational Efficiency
+                    </h3>
+
+                    <p>
+                        Measure how efficiently your
+                        business operates and uses resources.
+                    </p>
+
+                    <div class="health-progress">
+
+                        <div class="progress-label">
+                            <span>Assessment</span>
+                            <span>Not Started</span>
+                        </div>
+
+                        <div class="progress-track">
+                            <div class="progress-value"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 02 FINANCIAL -->
+
+                <div
+                    class="health-card financial"
+                    data-category="Financial Growth"
+                >
+
+                    <div class="card-top">
+
+                        <div class="health-icon">
+                            ₹
+                        </div>
+
+                        <span class="card-arrow">
+                            →
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Financial Growth
+                    </h3>
+
+                    <p>
+                        Understand profitability, cash flow,
+                        revenue and financial stability.
+                    </p>
+
+                    <div class="health-progress">
+
+                        <div class="progress-label">
+                            <span>Assessment</span>
+                            <span>Not Started</span>
+                        </div>
+
+                        <div class="progress-track">
+                            <div class="progress-value"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 03 MARKET -->
+
+                <div
+                    class="health-card market"
+                    data-category="Market Position & Competitiveness"
+                >
+
+                    <div class="card-top">
+
+                        <div class="health-icon">
+                            ◉
+                        </div>
+
+                        <span class="card-arrow">
+                            →
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Market Position
+                    </h3>
+
+                    <p>
+                        Evaluate customer retention,
+                        brand strength and competition.
+                    </p>
+
+                    <div class="health-progress">
+
+                        <div class="progress-label">
+                            <span>Assessment</span>
+                            <span>Not Started</span>
+                        </div>
+
+                        <div class="progress-track">
+                            <div class="progress-value"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 04 COMPLIANCE -->
+
+                <div
+                    class="health-card compliance"
+                    data-category="Compliance & Risk Management"
+                >
+
+                    <div class="card-top">
+
+                        <div class="health-icon">
+                            ✓
+                        </div>
+
+                        <span class="card-arrow">
+                            →
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Compliance & Risk
+                    </h3>
+
+                    <p>
+                        Identify legal, financial,
+                        operational and cybersecurity risks.
+                    </p>
+
+                    <div class="health-progress">
+
+                        <div class="progress-label">
+                            <span>Assessment</span>
+                            <span>Not Started</span>
+                        </div>
+
+                        <div class="progress-track">
+                            <div class="progress-value"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 05 SUSTAINABILITY -->
+
+                <div
+                    class="health-card sustainability"
+                    data-category="Business Sustainability & Growth"
+                >
+
+                    <div class="card-top">
+
+                        <div class="health-icon">
+                            ✦
+                        </div>
+
+                        <span class="card-arrow">
+                            →
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Sustainability & Growth
+                    </h3>
+
+                    <p>
+                        Measure scalability, innovation,
+                        leadership and long-term growth.
+                    </p>
+
+                    <div class="health-progress">
+
+                        <div class="progress-label">
+                            <span>Assessment</span>
+                            <span>Not Started</span>
+                        </div>
+
+                        <div class="progress-track">
+                            <div class="progress-value"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= AI INSIGHTS ================= -->
+
+        <section class="ai-section">
+
+            <div class="ai-glow"></div>
+
+            <div class="ai-content">
+
+                <div class="ai-badge">
+                    ✦ NKP AI INSIGHTS
+                </div>
+
+                <h2>
+                    Your business deserves
+                    <span>better decisions.</span>
+                </h2>
+
+                <p>
+                    Complete your assessment and let NKP
+                    analyze your business performance,
+                    identify risks and suggest practical
+                    improvement opportunities.
+                </p>
+
+                <div class="ai-features">
+
+                    <div>
+                        <span>✓</span>
+                        Strength Identification
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        Risk Detection
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        Smart Recommendations
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="ai-visual">
+
+                <div class="ai-orbit orbit-one"></div>
+                <div class="ai-orbit orbit-two"></div>
+
+                <div class="ai-core">
+                    <span>NKP</span>
+                    <small>AI</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ACTION PROCESS ================= -->
+
+        <section class="section-block">
+
+            <div class="section-heading center">
+
+                <span class="section-kicker">
+                    HOW NKP WORKS
+                </span>
+
+                <h2>
+                    From Assessment to Action
+                </h2>
+
+                <p>
+                    A simple three-stage approach to
+                    understanding and improving your business.
+                </p>
+
+            </div>
+
+
+            <div class="process-grid">
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        01
+                    </div>
+
+                    <div class="process-icon">
+                        ◈
+                    </div>
+
+                    <h3>
+                        Assess
+                    </h3>
+
+                    <p>
+                        Answer structured questions about
+                        your business across five key areas.
+                    </p>
+
+                </div>
+
+
+                <div class="process-line"></div>
+
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        02
+                    </div>
+
+                    <div class="process-icon">
+                        ◉
+                    </div>
+
+                    <h3>
+                        Analyze
+                    </h3>
+
+                    <p>
+                        NKP evaluates your responses and
+                        generates category health results.
+                    </p>
+
+                </div>
+
+
+                <div class="process-line"></div>
+
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        03
+                    </div>
+
+                    <div class="process-icon">
+                        ✦
+                    </div>
+
+                    <h3>
+                        Improve
+                    </h3>
+
+                    <p>
+                        Receive actionable recommendations
+                        and track your business improvement.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RECENT ACTIVITY ================= -->
+
+        <section class="section-block">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-kicker">
+                        ACTIVITY
+                    </span>
+
+                    <h2>
+                        Recent Assessment Activity
+                    </h2>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="view-details"
+                    id="viewAllBtn"
+                >
+                    View All →
+                </button>
+
+            </div>
+
+
+            <div class="activity-card">
+
+                <div class="empty-activity">
+
+                    <div class="empty-icon">
+                        ◴
+                    </div>
+
+                    <h3>
+                        No assessments yet
+                    </h3>
+
+                    <p>
+                        Your assessment history will appear
+                        here after you complete your first assessment.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="primary-btn small"
+                        id="activityStartBtn"
+                    >
+                        Start First Assessment →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer class="dashboard-footer">
+
+            <div>
+                <strong>NKP</strong>
+                <span> | Namma KanakkuPillai</span>
+            </div>
+
+            <p>
+                Business Intelligence • Assessment • Growth
+            </p>
+
+            <span>
+                © 2026 NKP
+            </span>
+
+        </footer>
+
+    </div>
+
+</main>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="js/dashboard.js"></script>
+```
+
+</body>
+
+</html>

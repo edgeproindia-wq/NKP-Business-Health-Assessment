@@ -1,0 +1,445 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #f0fdf4, #eff6ff);
+    color: #172033;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.top-header {
+    width: 100%;
+    height: 72px;
+
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    text-decoration: none;
+    color: #172033;
+
+    font-weight: 800;
+}
+
+.logo-icon {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #16a34a,
+        #2563eb
+    );
+
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.logo-text {
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.logo-text span {
+    display: block;
+
+    color: #16a34a;
+
+    font-size: 11px;
+    letter-spacing: 1.2px;
+}
+
+.step-text {
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+}
+
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress-wrapper {
+    max-width: 850px;
+
+    margin: 40px auto 0;
+
+    padding: 0 24px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #64748b;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 7px;
+
+    background: #e2e8f0;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 25%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #16a34a,
+        #2563eb
+    );
+
+    border-radius: 20px;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.setup-container {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 35px auto 60px;
+
+    padding: 0 24px;
+}
+
+.setup-card {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 22px;
+
+    padding: 42px;
+
+    box-shadow:
+        0 15px 40px rgba(15, 23, 42, 0.08);
+}
+
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.setup-header {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.setup-icon {
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 17px;
+
+    background: #ecfdf5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 26px;
+}
+
+.setup-header h1 {
+    font-size: 30px;
+
+    font-weight: 800;
+
+    color: #111827;
+
+    margin-bottom: 10px;
+}
+
+.setup-header p {
+    color: #64748b;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #334155;
+
+    margin-bottom: 8px;
+}
+
+.form-group label span {
+    color: #ef4444;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.form-group input,
+.form-group select {
+
+    width: 100%;
+
+    height: 50px;
+
+    border: 1px solid #dbe2ea;
+
+    border-radius: 11px;
+
+    padding: 0 15px;
+
+    font-size: 14px;
+
+    color: #172033;
+
+    background: #ffffff;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+.form-group input::placeholder {
+    color: #94a3b8;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+
+    border-color: #16a34a;
+
+    box-shadow:
+        0 0 0 4px rgba(22, 163, 74, 0.10);
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.form-actions {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 35px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+.btn {
+
+    min-width: 150px;
+
+    height: 48px;
+
+    border-radius: 10px;
+
+    padding: 0 22px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+    text-decoration: none;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* BACK */
+
+.btn-back {
+
+    color: #475569;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+}
+
+.btn-back:hover {
+    background: #f1f5f9;
+}
+
+
+/* CONTINUE */
+
+.btn-primary {
+
+    border: none;
+
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #16a34a,
+        #15803d
+    );
+
+    box-shadow:
+        0 7px 18px rgba(22, 163, 74, 0.20);
+}
+
+.btn-primary:hover {
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 10px 22px rgba(22, 163, 74, 0.28);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    .top-header {
+        padding: 0 20px;
+    }
+
+    .progress-wrapper {
+        margin-top: 25px;
+        padding: 0 18px;
+    }
+
+    .setup-container {
+        margin-top: 25px;
+        padding: 0 18px;
+    }
+
+    .setup-card {
+        padding: 28px 20px;
+        border-radius: 18px;
+    }
+
+    .setup-header h1 {
+        font-size: 25px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .form-group.full-width {
+        grid-column: auto;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+
+        gap: 12px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 420px) {
+
+    .logo-text {
+        display: none;
+    }
+
+    .setup-card {
+        padding: 24px 16px;
+    }
+
+    .setup-header h1 {
+        font-size: 23px;
+    }
+}

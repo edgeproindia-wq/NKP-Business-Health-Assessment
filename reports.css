@@ -1,0 +1,865 @@
+/* =========================================
+   NKP | REPORTS & PROGRESS
+   ========================================= */
+
+:root {
+    --green: #16a34a;
+    --green-dark: #15803d;
+    --blue: #2563eb;
+
+    --background: #f5f8f7;
+    --white: #ffffff;
+
+    --text: #172033;
+    --muted: #64748b;
+
+    --border: #e2e8f0;
+
+    --light-green: #ecfdf3;
+    --light-blue: #eff6ff;
+
+    --shadow:
+        0 12px 30px rgba(15, 23, 42, 0.07);
+}
+
+
+/* =========================================
+   RESET
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family:
+        Inter,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: var(--background);
+    color: var(--text);
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.page-header {
+    width: 100%;
+    min-height: 76px;
+
+    background: var(--white);
+
+    border-bottom:
+        1px solid var(--border);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+    color: var(--text);
+}
+
+
+.logo-icon {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--green),
+            var(--blue)
+        );
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+}
+
+
+.logo-text {
+    font-size: 14px;
+    font-weight: 800;
+
+    letter-spacing: 0.4px;
+}
+
+
+.logo-text span {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 1.2px;
+
+    color: var(--muted);
+}
+
+
+.dashboard-link {
+    text-decoration: none;
+
+    color: var(--green);
+
+    font-size: 14px;
+    font-weight: 700;
+
+    padding: 10px 18px;
+
+    border:
+        1px solid rgba(22, 163, 74, 0.2);
+
+    background: var(--light-green);
+
+    border-radius: 10px;
+
+    transition: 0.2s ease;
+}
+
+
+.dashboard-link:hover {
+    background: var(--green);
+    color: white;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   MAIN
+   ========================================= */
+
+.reports-container {
+    width: min(1180px, 92%);
+
+    margin: 0 auto;
+
+    padding:
+        55px 0 70px;
+}
+
+
+/* =========================================
+   INTRO
+   ========================================= */
+
+.reports-intro {
+    margin-bottom: 35px;
+}
+
+
+.page-label {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 7px 14px;
+
+    border-radius: 50px;
+
+    background: var(--light-green);
+
+    color: var(--green-dark);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+}
+
+
+.reports-intro h1 {
+    margin-top: 14px;
+
+    font-size: 36px;
+
+    line-height: 1.2;
+
+    font-weight: 800;
+}
+
+
+.reports-intro p {
+    max-width: 650px;
+
+    margin-top: 12px;
+
+    color: var(--muted);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   SUMMARY CARDS
+   ========================================= */
+
+.summary-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 45px;
+}
+
+
+.summary-card {
+    background: var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 17px;
+
+    padding: 22px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow: var(--shadow);
+
+    transition: 0.25s ease;
+}
+
+
+.summary-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 16px 32px
+        rgba(15, 23, 42, 0.09);
+}
+
+
+.summary-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    border-radius: 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--light-green);
+
+    font-size: 21px;
+}
+
+
+.summary-card span {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+
+.summary-card strong {
+    display: block;
+
+    font-size: 21px;
+    font-weight: 800;
+
+    color: var(--text);
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    max-width: 150px;
+}
+
+
+/* =========================================
+   REPORT SECTION
+   ========================================= */
+
+.report-section {
+    margin-bottom: 45px;
+}
+
+
+.section-heading {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+
+.section-heading span {
+    color: var(--green);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+
+.section-heading h2 {
+    margin-top: 7px;
+
+    font-size: 25px;
+    font-weight: 800;
+}
+
+
+.current-score {
+    font-size: 25px;
+    font-weight: 800;
+
+    color: var(--green-dark);
+
+    background: var(--light-green);
+
+    padding: 9px 17px;
+
+    border-radius: 11px;
+}
+
+
+/* =========================================
+   HEALTH GRID
+   ========================================= */
+
+.health-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+
+.health-card {
+    background: var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 16px;
+
+    padding: 21px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.health-card-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 13px;
+}
+
+
+.health-card-top span {
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.health-card-top strong {
+    color: var(--green-dark);
+
+    font-size: 14px;
+}
+
+
+.health-progress {
+    width: 100%;
+
+    height: 8px;
+
+    background: #e8eef0;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+
+.health-progress-fill {
+    width: 0%;
+
+    height: 100%;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--green),
+            var(--blue)
+        );
+
+    transition:
+        width 0.7s ease;
+}
+
+
+/* =========================================
+   HISTORY TABLE
+   ========================================= */
+
+.history-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    background: var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.history-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 720px;
+}
+
+
+.history-table th {
+    padding: 17px 20px;
+
+    text-align: left;
+
+    background: #f8fafc;
+
+    color: var(--muted);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.8px;
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+.history-table td {
+    padding: 18px 20px;
+
+    font-size: 13px;
+
+    border-bottom:
+        1px solid var(--border);
+
+    color: var(--text);
+}
+
+
+.history-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+.history-table tbody tr:hover {
+    background: #fbfdfc;
+}
+
+
+.history-table td:last-child {
+    font-weight: 700;
+}
+
+
+/* =========================================
+   PROGRESS SECTION
+   ========================================= */
+
+.progress-section {
+    background:
+        linear-gradient(
+            135deg,
+            #effdf4,
+            #eff6ff
+        );
+
+    border:
+        1px solid #dceee3;
+
+    border-radius: 22px;
+
+    padding: 35px;
+
+    margin-bottom: 35px;
+
+    overflow: hidden;
+}
+
+
+.progress-content {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.progress-content h2 {
+    margin-top: 12px;
+
+    font-size: 26px;
+
+    font-weight: 800;
+}
+
+
+.progress-content p {
+    max-width: 600px;
+
+    margin-top: 10px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   PROGRESS RING
+   ========================================= */
+
+.progress-visual {
+    flex-shrink: 0;
+}
+
+
+.progress-ring {
+    width: 145px;
+    height: 145px;
+
+    border-radius: 50%;
+
+    background:
+        conic-gradient(
+            var(--green) 0deg,
+            var(--blue) 0deg,
+            #dce7e2 0deg
+        );
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+
+.progress-ring::after {
+    content: "";
+
+    position: absolute;
+
+    width: 112px;
+    height: 112px;
+
+    border-radius: 50%;
+
+    background: var(--white);
+}
+
+
+.progress-ring strong {
+    position: relative;
+
+    z-index: 2;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    color: var(--green-dark);
+}
+
+
+/* =========================================
+   ACTIONS
+   ========================================= */
+
+.report-actions {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 20px;
+}
+
+
+.primary-btn,
+.secondary-btn {
+    border: none;
+
+    cursor: pointer;
+
+    border-radius: 11px;
+
+    padding: 13px 23px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: 0.2s ease;
+}
+
+
+.primary-btn {
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--green),
+            var(--blue)
+        );
+
+    box-shadow:
+        0 8px 20px
+        rgba(37, 99, 235, 0.18);
+}
+
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(37, 99, 235, 0.25);
+}
+
+
+.secondary-btn {
+    color: var(--text);
+
+    background: var(--white);
+
+    border:
+        1px solid var(--border);
+}
+
+
+.secondary-btn:hover {
+    color: var(--green-dark);
+
+    background: var(--light-green);
+
+    border-color: var(--green);
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.page-footer {
+    text-align: center;
+
+    padding: 25px 20px;
+
+    background: var(--white);
+
+    border-top:
+        1px solid var(--border);
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 950px) {
+
+    .summary-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .health-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .progress-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .progress-visual {
+        align-self: center;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .page-header {
+        padding: 0 5%;
+    }
+
+
+    .logo-text {
+        font-size: 12px;
+    }
+
+
+    .logo-text span {
+        font-size: 8px;
+    }
+
+
+    .dashboard-link {
+        padding: 8px 12px;
+
+        font-size: 12px;
+    }
+
+
+    .reports-container {
+        width: 90%;
+
+        padding-top: 35px;
+    }
+
+
+    .reports-intro h1 {
+        font-size: 29px;
+    }
+
+
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .section-heading {
+        align-items: flex-start;
+
+        gap: 15px;
+
+        flex-direction: column;
+    }
+
+
+    .current-score {
+        font-size: 20px;
+    }
+
+
+    .progress-section {
+        padding: 25px;
+    }
+
+
+    .progress-content h2 {
+        font-size: 22px;
+    }
+
+
+    .report-actions {
+        flex-direction: column;
+    }
+
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,782 @@
+/* =========================================
+   NKP - REGISTER PAGE
+   Namma KanakkuPillai
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #16a34a;
+    --dark-green: #15803d;
+    --blue: #2563eb;
+    --dark-blue: #1d4ed8;
+
+    --bg: #f5f8f7;
+    --white: #ffffff;
+
+    --text: #172033;
+    --muted: #64748b;
+
+    --border: #e2e8f0;
+    --light-green: #ecfdf3;
+    --light-blue: #eff6ff;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   MAIN PAGE
+========================================= */
+
+.register-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 48% 52%;
+}
+
+
+/* =========================================
+   LEFT BRAND SECTION
+========================================= */
+
+.register-brand {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(37, 99, 235, 0.25),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 90% 85%,
+            rgba(22, 163, 74, 0.28),
+            transparent 35%
+        ),
+        linear-gradient(
+            145deg,
+            #0f5132,
+            #123d32 45%,
+            #123b63
+        );
+
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+}
+
+
+/* Decorative circles */
+
+.register-brand::before {
+    content: "";
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+
+    right: -100px;
+    top: -100px;
+}
+
+.register-brand::after {
+    content: "";
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 50%;
+
+    left: -180px;
+    bottom: -180px;
+}
+
+
+/* =========================================
+   BRAND CONTENT
+========================================= */
+
+.brand-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+}
+
+.logo > span:last-child {
+    line-height: 1.1;
+}
+
+.logo > span:last-child span {
+    display: block;
+    color: #86efac;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+
+/* Logo icon */
+
+.logo-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: linear-gradient(
+        135deg,
+        #22c55e,
+        #2563eb
+    );
+
+    color: white;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================
+   BRAND HEADING
+========================================= */
+
+.brand-heading {
+    margin-top: 90px;
+}
+
+.eyebrow {
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    color: #bbf7d0;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+.brand-heading h1 {
+    margin-top: 22px;
+
+    font-size: clamp(42px, 4vw, 64px);
+
+    line-height: 1.08;
+
+    letter-spacing: -2px;
+
+    font-weight: 700;
+}
+
+.brand-heading h1 strong {
+    display: block;
+
+    background: linear-gradient(
+        90deg,
+        #4ade80,
+        #60a5fa
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+.brand-heading p {
+    max-width: 520px;
+
+    margin-top: 24px;
+
+    color: #cbd5e1;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.feature-mini {
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.mini-item {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.mini-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.09);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    font-size: 20px;
+}
+
+.mini-item strong {
+    display: block;
+
+    font-size: 14px;
+
+    margin-bottom: 4px;
+}
+
+.mini-item p {
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   RIGHT FORM SECTION
+========================================= */
+
+.register-form-section {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 7%;
+
+    background: var(--bg);
+}
+
+
+/* =========================================
+   REGISTER CARD
+========================================= */
+
+.register-card {
+    width: 100%;
+    max-width: 570px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 24px;
+
+    padding: 42px;
+
+    box-shadow:
+        0 20px 60px rgba(15, 23, 42, 0.08);
+}
+
+
+/* =========================================
+   MOBILE LOGO
+========================================= */
+
+.mobile-logo {
+    display: none;
+
+    margin-bottom: 35px;
+}
+
+.mobile-logo .logo {
+    color: var(--text);
+}
+
+.mobile-logo .logo > span:last-child span {
+    color: var(--green);
+}
+
+.mobile-logo .logo-icon {
+    color: white;
+}
+
+
+/* =========================================
+   FORM HEADING
+========================================= */
+
+.form-heading {
+    margin-bottom: 30px;
+}
+
+.welcome {
+    color: var(--green);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.form-heading h2 {
+    margin-top: 9px;
+
+    font-size: 32px;
+
+    letter-spacing: -1px;
+}
+
+.form-heading p {
+    margin-top: 8px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   FORM GRID
+========================================= */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+
+/* =========================================
+   INPUT GROUP
+========================================= */
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #334155;
+}
+
+
+.input-group input {
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 15px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: var(--text);
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.input-group input::placeholder {
+    color: #94a3b8;
+}
+
+
+.input-group input:hover {
+    border-color: #cbd5e1;
+}
+
+
+.input-group input:focus {
+    border-color: var(--blue);
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 235, 0.09);
+}
+
+
+/* =========================================
+   TERMS
+========================================= */
+
+.terms {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin: 2px 0 24px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    cursor: pointer;
+}
+
+.terms input {
+    width: 16px;
+    height: 16px;
+
+    margin-top: 2px;
+
+    accent-color: var(--green);
+
+    cursor: pointer;
+}
+
+.terms a {
+    color: var(--blue);
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   CREATE ACCOUNT BUTTON
+========================================= */
+
+.create-btn {
+    width: 100%;
+
+    height: 52px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background: linear-gradient(
+        135deg,
+        var(--green),
+        var(--blue)
+    );
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    box-shadow:
+        0 10px 25px rgba(37, 99, 235, 0.18);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.create-btn span {
+    font-size: 20px;
+
+    line-height: 1;
+
+    transition: transform 0.2s ease;
+}
+
+.create-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 30px rgba(37, 99, 235, 0.25);
+}
+
+.create-btn:hover span {
+    transform: translateX(4px);
+}
+
+.create-btn:active {
+    transform: translateY(0);
+}
+
+.create-btn:disabled {
+    cursor: not-allowed;
+
+    opacity: 0.65;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================================
+   LOGIN TEXT
+========================================= */
+
+.login-text {
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+.login-text a {
+    color: var(--blue);
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    margin-left: 4px;
+}
+
+.login-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   SECURITY NOTE
+========================================= */
+
+.secure-note {
+    margin-top: 20px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid var(--border);
+
+    text-align: center;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .register-page {
+        grid-template-columns: 42% 58%;
+    }
+
+    .register-brand {
+        padding: 50px 7%;
+    }
+
+    .brand-heading {
+        margin-top: 60px;
+    }
+
+    .brand-heading h1 {
+        font-size: 42px;
+    }
+
+    .register-form-section {
+        padding: 35px;
+    }
+
+    .register-card {
+        padding: 32px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .register-page {
+        display: block;
+
+        min-height: 100vh;
+    }
+
+    .register-brand {
+        display: none;
+    }
+
+    .register-form-section {
+        min-height: 100vh;
+
+        padding: 25px 16px;
+
+        align-items: flex-start;
+    }
+
+    .register-card {
+        max-width: 100%;
+
+        margin-top: 10px;
+
+        padding: 28px 22px;
+
+        border-radius: 18px;
+    }
+
+    .mobile-logo {
+        display: block;
+    }
+
+    .form-heading h2 {
+        font-size: 27px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+    .input-group {
+        margin-bottom: 18px;
+    }
+
+    .create-btn {
+        height: 50px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+    .register-form-section {
+        padding: 15px 10px;
+    }
+
+    .register-card {
+        padding: 24px 18px;
+
+        border-radius: 16px;
+    }
+
+    .mobile-logo {
+        margin-bottom: 28px;
+    }
+
+    .form-heading {
+        margin-bottom: 25px;
+    }
+
+    .form-heading h2 {
+        font-size: 24px;
+    }
+
+    .form-heading p {
+        font-size: 13px;
+    }
+
+    .input-group input {
+        height: 46px;
+
+        font-size: 13px;
+    }
+
+    .terms {
+        font-size: 11px;
+    }
+}

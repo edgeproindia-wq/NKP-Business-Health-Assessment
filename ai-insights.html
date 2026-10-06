@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NKP AI Assistant</title>
+
+    <link
+        rel="stylesheet"
+        href="css/ai-insights.css"
+    >
+
+</head>
+
+<body>
+
+
+    <!-- ==============================
+         HEADER
+         ============================== -->
+
+    <header class="ai-header">
+
+        <div class="ai-brand">
+
+            <div class="ai-logo">
+                NK
+            </div>
+
+            <div>
+
+                <h2>
+                    NKP AI
+                </h2>
+
+                <span>
+                    Namma KanakkuPillai
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="header-actions">
+
+            <a href="results.html">
+                Results
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==============================
+         MAIN CHAT AREA
+         ============================== -->
+
+    <main class="chat-page">
+
+        <div class="chat-container">
+
+
+            <!-- CHAT HEADER -->
+
+            <div class="chat-top">
+
+                <div class="assistant-info">
+
+                    <div class="assistant-avatar">
+                        🤖
+                    </div>
+
+                    <div>
+
+                        <h1>
+                            NKP AI Assistant
+                        </h1>
+
+                        <p>
+                            Your Business Intelligence Assistant
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="online-status">
+
+                    <span></span>
+
+                    AI Online
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CHAT MESSAGES -->
+
+            <div
+                id="chatMessages"
+                class="chat-messages"
+            >
+
+
+                <!-- AI WELCOME MESSAGE -->
+
+                <div class="message ai-message">
+
+                    <div class="message-avatar">
+                        🤖
+                    </div>
+
+                    <div class="message-content">
+
+                        <div class="message-name">
+                            NKP AI
+                        </div>
+
+                        <div class="message-bubble">
+
+                            <p>
+                                Hello! 👋 I'm your NKP AI
+                                Business Assistant.
+                            </p>
+
+                            <p>
+                                I've received your business
+                                health assessment results.
+                                You can ask me anything about
+                                your business performance,
+                                weaknesses, growth and
+                                improvement strategies.
+                            </p>
+
+                            <p>
+                                For example:
+                            </p>
+
+                            <div class="suggestion-list">
+
+                                <button
+                                    class="quick-question"
+                                    data-question="What are the main weaknesses in my business?"
+                                >
+                                    🔍 What are my main weaknesses?
+                                </button>
+
+                                <button
+                                    class="quick-question"
+                                    data-question="How can I improve my business profit?"
+                                >
+                                    💰 How can I improve my profit?
+                                </button>
+
+                                <button
+                                    class="quick-question"
+                                    data-question="What should I focus on first?"
+                                >
+                                    🎯 What should I focus on first?
+                                </button>
+
+                                <button
+                                    class="quick-question"
+                                    data-question="Give me a 90 day business improvement plan."
+                                >
+                                    🚀 Give me a 90-day plan
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- TYPING INDICATOR -->
+
+            <div
+                id="typingIndicator"
+                class="typing-indicator hidden"
+            >
+
+                <div class="message-avatar">
+                    🤖
+                </div>
+
+                <div class="typing-bubble">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- INPUT AREA -->
+
+            <div class="chat-input-area">
+
+                <div class="input-wrapper">
+
+                    <textarea
+                        id="messageInput"
+                        placeholder="Ask anything about your business..."
+                        rows="1"
+                    ></textarea>
+
+
+                    <button
+                        id="sendButton"
+                        type="button"
+                        aria-label="Send message"
+                    >
+                        ➤
+                    </button>
+
+                </div>
+
+
+                <p class="input-note">
+
+                    NKP AI uses your assessment information
+                    to provide personalized business guidance.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ==============================
+         FOOTER
+         ============================== -->
+
+    <footer>
+
+        <p>
+            © 2026 NKP | Namma KanakkuPillai
+        </p>
+
+    </footer>
+
+
+
+    <script src="js/ai-insights.js"></script>
+
+</body>
+
+</html>

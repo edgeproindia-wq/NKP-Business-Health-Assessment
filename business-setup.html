@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NPK | Business Setup</title>
+
+    <link rel="stylesheet" href="css/business-setup.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="top-header">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">NPK</span>
+
+            <span class="logo-text">
+                NAMMA
+                <span>KANAKKUPILLAI</span>
+            </span>
+        </a>
+
+        <div class="step-text">
+            Step 1 of 4
+        </div>
+
+    </header>
+
+
+    <!-- PROGRESS -->
+    <section class="progress-wrapper">
+
+        <div class="progress-info">
+            <span>Business Setup</span>
+            <span>25%</span>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+
+    </section>
+
+
+    <!-- MAIN -->
+    <main class="setup-container">
+
+        <div class="setup-card">
+
+            <!-- PAGE HEADER -->
+            <div class="setup-header">
+
+                <div class="setup-icon">
+                    🏢
+                </div>
+
+                <h1>Tell us about your business</h1>
+
+                <p>
+                    Let's get to know your business before we begin
+                    the health assessment.
+                </p>
+
+            </div>
+
+
+            <!-- BUSINESS FORM -->
+            <form id="businessSetupForm">
+
+                <div class="form-grid">
+
+                    <!-- BUSINESS NAME -->
+                    <div class="form-group full-width">
+
+                        <label for="businessName">
+                            Business Name <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="businessName"
+                            placeholder="Enter your business name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- BUSINESS TYPE -->
+                    <div class="form-group">
+
+                        <label for="businessType">
+                            Business Type <span>*</span>
+                        </label>
+
+                        <select id="businessType" required>
+
+                            <option value="">
+                                Select business type
+                            </option>
+
+                            <option value="Sole Proprietorship">
+                                Sole Proprietorship
+                            </option>
+
+                            <option value="Partnership">
+                                Partnership
+                            </option>
+
+                            <option value="Private Limited">
+                                Private Limited
+                            </option>
+
+                            <option value="LLP">
+                                LLP
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- INDUSTRY -->
+                    <div class="form-group">
+
+                        <label for="industry">
+                            Industry <span>*</span>
+                        </label>
+
+                        <select id="industry" required>
+
+                            <option value="">
+                                Select industry
+                            </option>
+
+                            <option value="Retail">
+                                Retail
+                            </option>
+
+                            <option value="Food & Beverage">
+                                Food & Beverage
+                            </option>
+
+                            <option value="Manufacturing">
+                                Manufacturing
+                            </option>
+
+                            <option value="Agriculture">
+                                Agriculture
+                            </option>
+
+                            <option value="Healthcare">
+                                Healthcare
+                            </option>
+
+                            <option value="Technology">
+                                Technology
+                            </option>
+
+                            <option value="Services">
+                                Services
+                            </option>
+
+                            <option value="Wholesale">
+                                Wholesale
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- LOCATION -->
+                    <div class="form-group full-width">
+
+                        <label for="location">
+                            Business Location <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="location"
+                            placeholder="City, State"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- START DATE -->
+                    <div class="form-group">
+
+                        <label for="startDate">
+                            Business Start Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="startDate"
+                        >
+
+                    </div>
+
+
+                    <!-- EMPLOYEES -->
+                    <div class="form-group">
+
+                        <label for="employees">
+                            Number of Employees
+                        </label>
+
+                        <input
+                            type="number"
+                            id="employees"
+                            placeholder="e.g. 10"
+                            min="0"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACTION BUTTONS -->
+                <div class="form-actions">
+
+                    <a href="login.html" class="btn btn-back">
+                        ← Back
+                    </a>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Continue to Assessment →
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="js/business-setup.js"></script>
+
+</body>
+</html>
+   

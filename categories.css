@@ -1,0 +1,595 @@
+
+:root {
+    --primary: #16a34a;
+    --primary-dark: #15803d;
+    --secondary: #2563eb;
+
+    --text: #172033;
+    --muted: #64748b;
+
+    --white: #ffffff;
+    --background: #f5f8f7;
+    --border: #e2e8f0;
+
+    --shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        Inter,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: var(--background);
+    color: var(--text);
+
+    min-height: 100vh;
+}
+
+.page-header {
+    width: 100%;
+    height: 76px;
+
+    background: var(--white);
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    text-decoration: none;
+    color: var(--text);
+}
+
+.logo-icon {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    color: var(--white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-weight: 900;
+
+    box-shadow:
+        0 8px 20px rgba(22, 163, 74, 0.18);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    line-height: 1.1;
+
+    letter-spacing: 0.4px;
+}
+
+.logo-text span {
+    color: var(--primary);
+
+    font-size: 9px;
+
+    letter-spacing: 1.4px;
+
+    margin-top: 4px;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.back-btn {
+    text-decoration: none;
+
+    color: var(--muted);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    padding: 10px 18px;
+
+    border-radius: 10px;
+
+    transition: all 0.25s ease;
+}
+
+.back-btn:hover {
+    background: #f1f5f9;
+    color: var(--text);
+
+    transform: translateX(-2px);
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.categories-container {
+    width: min(1200px, 92%);
+
+    margin: 0 auto;
+
+    padding: 55px 0 70px;
+}
+
+
+/* =========================================================
+   PAGE INTRO
+========================================================= */
+
+.page-intro {
+    max-width: 760px;
+
+    margin: 0 auto 45px;
+
+    text-align: center;
+}
+
+.step-label {
+    display: inline-block;
+
+    background: #dcfce7;
+
+    color: var(--primary-dark);
+
+    padding: 8px 16px;
+
+    border-radius: 50px;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 0.6px;
+
+    margin-bottom: 18px;
+}
+
+.page-intro h1 {
+    font-size: clamp(32px, 5vw, 48px);
+
+    line-height: 1.15;
+
+    font-weight: 800;
+
+    margin-bottom: 16px;
+}
+
+.page-intro h1 span {
+    color: var(--primary);
+}
+
+.page-intro p {
+    color: var(--muted);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CATEGORY GRID
+========================================================= */
+
+.category-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+/* =========================================================
+   CATEGORY CARD
+========================================================= */
+
+.category-card {
+    position: relative;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 22px;
+
+    padding: 30px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* Decorative circle */
+
+.category-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(22, 163, 74, 0.06);
+
+    top: -70px;
+    right: -70px;
+
+    pointer-events: none;
+}
+
+.category-card:hover {
+    transform: translateY(-6px);
+
+    border-color:
+        rgba(22, 163, 74, 0.35);
+
+    box-shadow:
+        0 22px 50px
+        rgba(15, 23, 42, 0.12);
+}
+
+
+/* =========================================================
+   CATEGORY ICON
+========================================================= */
+
+.category-icon {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 16px;
+
+    background: #ecfdf5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+
+    margin-bottom: 22px;
+
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =========================================================
+   CATEGORY TITLE
+========================================================= */
+
+.category-card h2 {
+    position: relative;
+    z-index: 1;
+
+    font-size: 21px;
+
+    line-height: 1.35;
+
+    font-weight: 750;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   CATEGORY DESCRIPTION
+========================================================= */
+
+.category-card p {
+    position: relative;
+    z-index: 1;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 22px;
+
+    min-height: 72px;
+}
+
+
+/* =========================================================
+   ASSESSMENT BUTTON
+========================================================= */
+
+.assess-btn {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+
+    border: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--primary-dark)
+        );
+
+    color: var(--white);
+
+    padding: 14px 18px;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.assess-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 24px
+        rgba(22, 163, 74, 0.25);
+}
+
+.assess-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   INFORMATION BOX
+========================================================= */
+
+.info-box {
+    margin-top: 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #f0fdf4
+        );
+
+    border: 1px solid #dbeafe;
+
+    border-radius: 20px;
+
+    padding: 28px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+}
+
+.info-icon {
+    width: 46px;
+    height: 46px;
+
+    min-width: 46px;
+
+    border-radius: 12px;
+
+    background: var(--white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+
+    box-shadow:
+        0 5px 15px
+        rgba(15, 23, 42, 0.06);
+}
+
+.info-box h3 {
+    font-size: 17px;
+
+    margin-bottom: 7px;
+}
+
+.info-box p {
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.page-footer {
+    text-align: center;
+
+    padding: 25px;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .page-header {
+        padding: 0 4%;
+    }
+
+    .categories-container {
+        width: 92%;
+
+        padding-top: 40px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-intro {
+        margin-bottom: 32px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .page-header {
+        height: 68px;
+    }
+
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+
+        font-size: 12px;
+    }
+
+    .logo-text {
+        font-size: 12px;
+    }
+
+    .logo-text span {
+        font-size: 7px;
+    }
+
+    .back-btn {
+        padding: 8px 10px;
+
+        font-size: 13px;
+    }
+
+    .categories-container {
+        padding: 35px 0 50px;
+    }
+
+    .page-intro h1 {
+        font-size: 31px;
+    }
+
+    .page-intro p {
+        font-size: 14px;
+    }
+
+    .category-card {
+        padding: 23px;
+
+        border-radius: 18px;
+    }
+
+    .category-card h2 {
+        font-size: 19px;
+    }
+
+    .category-card p {
+        min-height: auto;
+    }
+
+    .info-box {
+        padding: 20px;
+
+        gap: 13px;
+    }
+
+    .info-box h3 {
+        font-size: 15px;
+    }
+
+    .info-box p {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .page-header {
+        padding: 0 3%;
+    }
+
+    .logo-text {
+        display: none;
+    }
+
+    .categories-container {
+        width: 94%;
+    }
+
+    .category-card {
+        padding: 20px;
+    }
+}
